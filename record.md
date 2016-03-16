@@ -132,17 +132,21 @@ ___
         ```
 * ### Build docker images: "swiftlinux:latest"
     ```sh
-    cd <src_root>/docker/repl
-    sudo docker build -t swiftlinux:latest .
+    $ cd <src_root>/docker/repl
+    $ sudo docker build -t swiftlinux:latest .
     ```
     * #### Run docker cmd
     ```sh
-    sudo docker run --net=none --ulimit data=134217728:134217728 --ulimit locks=5:5 --ulimit fsize=134217728:134217728 --ulimit rss=134217728:134217728 --ulimit nproc=20:20 --ulimit cpu=6:6 -m 128M --rm -e SWIFTFILE=code-tmp.swift -v /gsa/tlbgsa/home/d/e/deslin/tmp//sandbox/2432-2529f6c0-eadc-11e5-9bff-63ae209bd282/swiftfiles:/swiftfiles swiftlinux
+    $ sudo docker run --net=none --ulimit data=134217728:134217728 --ulimit locks=5:5 --ulimit fsize=134217728:134217728 --ulimit rss=134217728:134217728 --ulimit nproc=20:20 --ulimit cpu=6:6 -m 128M --rm -e SWIFTFILE=code-tmp.swift -v /gsa/tlbgsa/home/d/e/deslin/tmp//sandbox/2432-2529f6c0-eadc-11e5-9bff-63ae209bd282/swiftfiles:/swiftfiles swiftlinux
     ```
     Output Message:
     ```
     WARNING: Your kernel does not support swap limit capabilities, memory limited without swap.
     docker: Error response from daemon: mkdir /gsa/tlbgsa/home/d/e/deslin/tmp/sandbox: permission denied.
     ```
-    
+* ### Run `$ gulp` as root
+    ```sh
+    $ sudo su
+    $ gulp
+    ```
     
